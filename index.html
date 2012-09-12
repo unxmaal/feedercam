@@ -1,0 +1,39 @@
+<html>
+
+<head>
+<title>Feedercam -- Oxford, MI, USA Backyard Webcam</title>
+</head>
+
+<body>
+
+<b>Feedercam -- Oxford, MI, USA Backyard Webcam</b><br />
+[Live Cam Feed]<br />
+
+<img src="grab.php" width="640" height="480" name="cam" alt="Feedercam Image" onload="InitRef()">
+
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function Refresh() {
+tmp = new Date();
+tmp = "?"+tmp.getTime();
+url = "grab.php";
+document.images["cam"].src = url+tmp;
+}
+
+function InitRef() {
+setTimeout("Refresh()", 100);
+}
+
+// -->
+</script>
+
+<br /><br /><b>Perhaps you would like to</b> <a href="motion/"><b>view the daily motion capture videos</b></a><b>?</b>
+<br /><br />
+
+<b>What is feedercam?</b><br />
+Feedercam is a weatherproof, nightvision camera attached to our house located in Oxford, MI, USA. The camera operates 24/7 and is connected to a PC through the use of an IP Video Server. The PC is running <a href="http://debian.org">Debian Linux</a> and a <a href="http://www.lavrsen.dk/twiki/bin/view/Motion/WebHome">motion</a> daemon. Motion constantly monitors the webcam for any significant change in the image. Every time a frame is captured, it is appended to the end of an MPEG4 video file. The motion daemon is also configured to create a new video file daily at 12 Midnight. You can view the daily motion videos by clicking the link above. Thanks for visiting!
+
+</body>
+
+</html>
